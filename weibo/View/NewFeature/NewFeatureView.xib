@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NewFeatureView" customModule="weibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuP-3B-u8d">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dda-7B-oMi">
+                    <rect key="frame" x="135" y="444" width="105" height="36"/>
+                    <state key="normal" title="进入微博" backgroundImage="new_feature_finish_button"/>
+                    <state key="highlighted" backgroundImage="new_feature_finish_button_highlighted"/>
+                    <connections>
+                        <action selector="goWeibo:" destination="iN0-l3-epB" eventType="touchUpInside" id="jY2-bY-ib4"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="6lu-Kl-fEP">
+                    <rect key="frame" x="160" y="512" width="55" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="0.51794886537296192" green="0.97949714467005078" blue="0.15640786624590164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kuP-3B-u8d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0nN-c7-6OQ"/>
+                <constraint firstAttribute="bottom" secondItem="kuP-3B-u8d" secondAttribute="bottom" id="6ep-ya-vVU"/>
+                <constraint firstItem="6lu-Kl-fEP" firstAttribute="top" secondItem="dda-7B-oMi" secondAttribute="bottom" constant="32" id="G9G-wp-uAB"/>
+                <constraint firstAttribute="bottom" secondItem="dda-7B-oMi" secondAttribute="bottom" constant="187" id="Rw5-zL-hz2"/>
+                <constraint firstItem="6lu-Kl-fEP" firstAttribute="centerX" secondItem="dda-7B-oMi" secondAttribute="centerX" id="hQa-Q0-8Rb"/>
+                <constraint firstItem="dda-7B-oMi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ia7-ur-GGA"/>
+                <constraint firstItem="kuP-3B-u8d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rQV-zo-PcH"/>
+                <constraint firstAttribute="trailing" secondItem="kuP-3B-u8d" secondAttribute="trailing" id="rVP-GU-wzi"/>
+            </constraints>
+            <connections>
+                <outlet property="goWeiboBtn" destination="dda-7B-oMi" id="fsq-gz-VlO"/>
+                <outlet property="pageController" destination="6lu-Kl-fEP" id="rwc-Qj-rHI"/>
+                <outlet property="scrollView" destination="kuP-3B-u8d" id="f27-IX-TZX"/>
+            </connections>
+            <point key="canvasLocation" x="42.5" y="121.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="new_feature_finish_button" width="105" height="36"/>
+        <image name="new_feature_finish_button_highlighted" width="105" height="36"/>
+    </resources>
+</document>
